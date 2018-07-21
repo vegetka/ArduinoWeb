@@ -12,7 +12,7 @@ app.get('/', function(req, res){
 });
 
 io.on('connection', function(socket){
-    console.log('connection to client estabilished');
+    console.log('Connection to client estabilished');
     socket.on('disconnect', function(){
         console.log('Server has disconnected');
     });
