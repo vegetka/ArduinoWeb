@@ -4,8 +4,8 @@ var app = express();
 var server = http.createServer(app);
 var io = require('socket.io')(server);
 var SerialPort = require('serialport');
-var serialport = new SerialPort('<add in the serial port for your Arduino>', {
-    parser: SerialPort.parsers.Readline('\n')
+var serialport = new SerialPort('COM3', {
+    parser: SerialPort.parsers.readline('\n')
 });
 app.engine('ejs', require('ejs').__express);
 app.set('view engine', 'ejs');
