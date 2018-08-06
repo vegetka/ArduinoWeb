@@ -8,9 +8,9 @@ void setup() {
 void loop() {
   int buttonState = digitalRead(switchButton);
   if(buttonState == HIGH){
-    Serial.print("1");
+    Serial.println("1");
   }else{
-    Serial.print("0");
+    Serial.println("0");
   }
   delay(500);
 }
